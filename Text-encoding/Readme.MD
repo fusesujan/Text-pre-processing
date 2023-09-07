@@ -49,7 +49,7 @@ Suppose our corpus include three reviews on company as follows:
 ##### **corpus** =
 
     [
-      I liked working at Fusemachines.
+      I like working at Fusemachines.
       Fusemachines has a skilled team.
       Good career opportunities are here.
     ]
@@ -96,20 +96,20 @@ From the given corpus first we have to make the Vocabulary ( Collection of uniqu
 From above [corpus](#corpus)
 
 **Vocabulary**:
-` ['are', 'at', 'career', 'fusemachines', 'good', 'has', 'here', 'liked', 'opportunities', 'skilled', 'team', 'working']`
+` ['like', 'working', 'Fusemachines', 'skilled', 'team', 'Good', 'career', 'opportunities']`
 
 _Some stopwords are removed here to reduce dimensionality._
 
 **BoW Representation**:
 
-`Sentence 1: [0 1 0 1 0 0 0 1 0 0 0 1] `  
-`Sentence 2: [0 0 0 1 0 1 0 0 0 1 1 0] `  
-`Sentence 3: [1 0 1 0 1 0 1 0 1 0 0 0] `
+`Sentence 1: [1, 1, 1, 0, 0, 0, 0, 0] `  
+`Sentence 2: [0, 0, 1, 1, 1, 0, 0, 0]`  
+`Sentence 3: [0, 0, 0, 0, 0, 1, 1, 1] `
 
 Hence the whole corpus representation become,  
-`[  [0 1 0 1 0 0 0 1 0 0 0 1]  
-    [0 0 0 1 0 1 0 0 0 1 1 0]
-    [1 0 1 0 1 0 1 0 1 0 0 0]  ] `
+`[  [1, 1, 1, 0, 0, 0, 0, 0]   
+    [0, 0, 1, 1, 1, 0, 0, 0]
+    [0, 0, 0, 0, 0, 1, 1, 1]  ] `
 
 Basically there are two types of BOW ,Simple one and the binary one. Binary BOW we have to encode 1 or 0 for each word appearing or non-appearing in the sentence. Where as in simple we just write the frequency of that each word.
 
